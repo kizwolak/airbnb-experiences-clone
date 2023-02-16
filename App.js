@@ -2,17 +2,19 @@ import React from "react"
 import Navbar from "./components/Navbar"
 import Hero from "./components/Hero"
 import Card from "./components/Card"
+import data from "./data"
 
 export default function App() {
+    const mappedData = data.map(x => {
+        console.log(x);
+        return <Card id={x.id} title={x.title} description={x.description} price={x.price} img={x.coverImg} rating={x.stats.rating} count={x.stats.reviewCount} location={x.location} openSpots={x.openSpots} />
+    }); 
     return (
         <div>
             <Navbar />
             <Hero />
-<<<<<<< HEAD
-            <Card img='katie-zaferes.png'/>
-=======
-            <Card />
->>>>>>> 5cdd1854f9293dad69373690b82c93fdb9a54f14
+            {/* <Card img='katie-zaferes.png' rating='5.0' count={6} location='USA' title='Life Lessons with Katie Zaferes' price={136}/> */}
+            {mappedData}
         </div>
     )
 }
