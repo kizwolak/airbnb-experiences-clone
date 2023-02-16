@@ -8,7 +8,7 @@ export default function App() {
         <div>
             <Navbar />
             <Hero />
-            <Card />
+            <Card img='katie-zaferes.png'/>
         </div>
     )
 }

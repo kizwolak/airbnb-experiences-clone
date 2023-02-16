@@ -19,11 +19,11 @@ Notes:
   this data into the component.
 */
 
-export default function Card() {
+export default function Card(props) {
     return (
       <div className="card">
         <div className="card-image">
-          <img src='../images/katie-zaferes.png' className="card-photo"/>
+          <img src={'../images/' + props.img} className="card-photo"/>
           <div className="card-image-status">SOLD OUT</div>
         </div>
         <div className="rating">
