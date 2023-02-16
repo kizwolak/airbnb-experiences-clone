@@ -52,6 +52,7 @@ section {
 
 .card-photo {
     border-radius: 1em;
+    width: 15em;
 }
 
 .card-image-status {
