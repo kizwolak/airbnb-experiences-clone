@@ -1,7 +1,7 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-const path = require("path");
-
 module.exports = {
+  "output": {
+    "filename": "[name].pack.js"
+  },
   "module": {
     "rules": [
       {
@@ -16,19 +16,10 @@ module.exports = {
         },
         "exclude": /node_modules/,
         "test": /\.js$/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html"),
-    }),
-  ],
+  "entry": {
+    "index": "./index"
+  }
 };
