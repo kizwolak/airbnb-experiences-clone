@@ -5,7 +5,7 @@ export default function Card(props) {
       <div className="card">
         <div className="card-image">
           <img src={'../images/' + props.img} className="card-photo"/>
-          <div className="card-image-status">{props.status}</div>
+          {props.openSpots === 0 && <div className="card-image-status">SOLD OUT</div>}
         </div>
         <div className="rating">
           <img src='../images/star.png' />

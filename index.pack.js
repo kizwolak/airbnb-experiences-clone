@@ -503,10 +503,10 @@ function Card(props) {
       "div",
       { className: "card-image" },
       _react2.default.createElement("img", { src: '../images/' + props.img, className: "card-photo" }),
-      _react2.default.createElement(
+      props.openSpots === 0 && _react2.default.createElement(
         "div",
         { className: "card-image-status" },
-        props.status
+        "SOLD OUT"
       )
     ),
     _react2.default.createElement(
