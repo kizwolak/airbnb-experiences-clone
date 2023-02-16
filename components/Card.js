@@ -19,19 +19,11 @@ Notes:
   this data into the component.
 */
 
-<<<<<<< HEAD
 export default function Card(props) {
     return (
       <div className="card">
         <div className="card-image">
           <img src={'../images/' + props.img} className="card-photo"/>
-=======
-export default function Card() {
-    return (
-      <div className="card">
-        <div className="card-image">
-          <img src='../images/katie-zaferes.png' className="card-photo"/>
->>>>>>> 5cdd1854f9293dad69373690b82c93fdb9a54f14
           <div className="card-image-status">SOLD OUT</div>
         </div>
         <div className="rating">
