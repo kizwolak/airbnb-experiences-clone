@@ -541,7 +541,7 @@ function Card(props) {
         "b",
         null,
         "From $",
-        props.cost
+        props.price
       ),
       " / person"
     )

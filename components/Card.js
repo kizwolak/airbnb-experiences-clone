@@ -13,7 +13,7 @@ export default function Card(props) {
           <p className="count-loc">({props.count}) · {props.location}</p>
         </div>
         <p className="card-title">{props.title}</p>
-        <p className="card-price"><b>From ${props.cost}</b> / person</p>
+        <p className="card-price"><b>From ${props.price}</b> / person</p>
       </div>
     )
 }
