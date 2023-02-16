@@ -14,7 +14,9 @@ export default function App() {
             <Navbar />
             <Hero />
             {/* <Card img='katie-zaferes.png' rating='5.0' count={6} location='USA' title='Life Lessons with Katie Zaferes' price={136}/> */}
-            {mappedData}
+            <div className="cards-list">
+                {mappedData}
+            </div>
         </div>
     )
 }
