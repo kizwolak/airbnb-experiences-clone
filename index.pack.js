@@ -420,7 +420,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function App() {
     var mappedData = _data2.default.map(function (x) {
         console.log(x);
-        return _react2.default.createElement(_Card2.default, { id: x.id, title: x.title, description: x.description, price: x.price, img: x.coverImg, rating: x.stats.rating, count: x.stats.reviewCount, location: x.location, openSpots: x.openSpots });
+        return _react2.default.createElement(_Card2.default, { key: x.id, item: x });
     });
     return _react2.default.createElement(
         "div",
@@ -434,6 +434,8 @@ function App() {
         )
     );
 }
+
+// id={x.id} title={x.title} description={x.description} price={x.price} img={x.coverImg} rating={x.stats.rating} count={x.stats.reviewCount} location={x.location} openSpots={x.openSpots}
 
 /***/ }),
 /* 5 */
@@ -500,6 +502,7 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function Card(props) {
+  props = props.item;
   var badgeText = void 0;
   if (props.openSpots === 0) {
     badgeText = "SOLD OUT";
@@ -512,7 +515,7 @@ function Card(props) {
     _react2.default.createElement(
       "div",
       { className: "card-image" },
-      _react2.default.createElement("img", { src: '../images/' + props.img, className: "card-photo" }),
+      _react2.default.createElement("img", { src: '../images/' + props.coverImg, className: "card-photo" }),
       badgeText && _react2.default.createElement(
         "div",
         { className: "card-image-status" },
@@ -527,14 +530,14 @@ function Card(props) {
         "p",
         { className: "rating-number" },
         "\xA0 ",
-        props.rating,
+        props.stats.rating,
         " \xA0"
       ),
       _react2.default.createElement(
         "p",
         { className: "count-loc" },
         "(",
-        props.count,
+        props.stats.reviewCount,
         ") \xB7 ",
         props.location
       )
