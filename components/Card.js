@@ -21,6 +21,18 @@ Notes:
 
 export default function Card() {
     return (
-        <h1>Replace this</h1>
+      <div className="card">
+        <div className="card-image">
+          <img src='../images/katie-zaferes.png' className="card-photo"/>
+          <div className="card-image-status">SOLD OUT</div>
+        </div>
+        <div className="rating">
+          <img src='../images/star.png' />
+          <p className="rating-number">&nbsp; 5.0 &nbsp;</p>
+          <p className="count-loc">(6) · USA</p>
+        </div>
+        <p className="card-title">Life lessons with Katie Zaferes</p>
+        <p className="card-price"><b>From $136</b> / person</p>
+      </div>
     )
 }

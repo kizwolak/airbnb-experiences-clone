@@ -477,7 +477,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = Card;
 
@@ -507,11 +507,50 @@ Notes:
 */
 
 function Card() {
-    return _react2.default.createElement(
-        "h1",
+  return _react2.default.createElement(
+    "div",
+    { className: "card" },
+    _react2.default.createElement(
+      "div",
+      { className: "card-image" },
+      _react2.default.createElement("img", { src: "../images/katie-zaferes.png", className: "card-photo" }),
+      _react2.default.createElement(
+        "div",
+        { className: "card-image-status" },
+        "SOLD OUT"
+      )
+    ),
+    _react2.default.createElement(
+      "div",
+      { className: "rating" },
+      _react2.default.createElement("img", { src: "../images/star.png" }),
+      _react2.default.createElement(
+        "p",
+        { className: "rating-number" },
+        "\xA0 5.0 \xA0"
+      ),
+      _react2.default.createElement(
+        "p",
+        { className: "count-loc" },
+        "(6) \xB7 USA"
+      )
+    ),
+    _react2.default.createElement(
+      "p",
+      { className: "card-title" },
+      "Life lessons with Katie Zaferes"
+    ),
+    _react2.default.createElement(
+      "p",
+      { className: "card-price" },
+      _react2.default.createElement(
+        "b",
         null,
-        "Replace this"
-    );
+        "From $136"
+      ),
+      " / person"
+    )
+  );
 }
 
 /***/ }),
